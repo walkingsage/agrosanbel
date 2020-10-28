@@ -228,7 +228,8 @@ aside > ul > li > a {
   .main .right #carousel {
     display: flex;
     flex-direction: column;
-    padding: 43px 0px 46px 66px; }
+    padding: 43px 0px 46px 66px;
+    position: relative; }
     .main .right #carousel .carusel__container {
       display: grid;
       grid-template-columns: 50% 50%; }
