@@ -52,8 +52,11 @@ for(let i = 0; i<carousetItems.length; i++){
 }
 
 for(let i = 0; i<otzyv.length; i++){
-    if(i == 1){
+    if(i == 2){
         dotsIndicators.insertAdjacentHTML('beforeend', '<span class="circle active"></span>');
+    }
+    else if(i == 0 || i == otzyv.length-1){
+        dotsIndicators.insertAdjacentHTML('beforeend', '<span class="circle" style="display:none;"></span>');
     }
     else{
         dotsIndicators.insertAdjacentHTML('beforeend', '<span class="circle"></span>');
@@ -84,13 +87,31 @@ otzyv.forEach((element,index) => {
             if(i == index){
                 indicatorsDots[i].classList.add('active');
                 if(indexOtzyv < indexAcriveOtzyv){
-                    otzyv[indexOtzyv].classList.add('activeLeft');
-                    otzyv[indexOtzyv+1].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvLeft";
-                    otzyv[indexOtzyv+2].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvHideRight";
+                    otzyv[indexOtzyv].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 otzyvLeftActive";
+                    otzyv[indexOtzyv+1].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 otzyvLeftMove";
+                    otzyv[indexOtzyv+2].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvLeftHide";
+                    otzyv[indexOtzyv-1].style.animation =  "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvLeftShow";
+                    setTimeout(() => {
+                        otzyv[indexOtzyv].classList.add('active');
+                        otzyv[indexOtzyv+2].style.display = "none";
+                        otzyv[indexOtzyv-1].style.display = "grid";
+                    }, 1000);
+                    indexAcriveOtzyv = indexOtzyv;
+                }
+                else if(indexOtzyv == indexAcriveOtzyv){
+                    continue;
                 }
                 else{
-                    otzyv[indexOtzyv].style.animation = "none";
-                    otzyv[indexOtzyv].classList.add('activeRight');
+                    otzyv[indexOtzyv].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 otzyvRightActive";
+                    otzyv[indexOtzyv-1].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 otzyvRightMove";
+                    otzyv[indexOtzyv-2].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvRightHide";
+                    otzyv[indexOtzyv+1].style.animation =  "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvRightShow";
+                    setTimeout(() => {
+                        otzyv[indexOtzyv+1].style.display = "grid";  
+                        otzyv[indexOtzyv].classList.add("active");
+                        otzyv[indexOtzyv-2].style.display = "none";
+                    }, 1000);
+                    indexAcriveOtzyv = indexOtzyv;
                 }
             }
             else{
