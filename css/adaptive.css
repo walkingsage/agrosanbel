@@ -80,7 +80,6 @@
     display: grid !important;
     grid-template-columns: 50% 50%;
     position: relative;
-    overflow: hidden;
     height: 50px;
     padding: 0 10px;
     transition-duration: 1s;
@@ -178,7 +177,13 @@
     padding-bottom: 20px !important; }
 
   .reviews .container-right .otzyv__containers .otzyv img {
-    width: 30%; } }
+    width: 30%; }
+
+  .main .right #carousel .carusel__container .cost {
+    font-size: 19px !important; }
+
+  .main .right #carousel .carusel__container h2 {
+    font-size: 20px !important; } }
 @media screen and (max-width: 360px) {
   header .logo img {
     max-width: 150px !important; }
@@ -190,6 +195,12 @@
     padding: 55px 10px !important; }
 
   .otzyv {
-    width: 200px !important; } }
+    width: 200px !important; }
+
+  .main .right #carousel .carusel__container .cost {
+    font-size: 16px !important; }
+
+  .main .right #carousel .carusel__container h2 {
+    font-size: 16px !important; } }
 
 /*# sourceMappingURL=adaptive.css.map */
