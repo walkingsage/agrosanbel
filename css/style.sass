@@ -5,6 +5,9 @@
   outline: none
   box-sizing: border-box
 
+html
+  overflow: hidden
+
 body
   font-family: 'Futura', Arial, sans-serif
   font-weight: 400
@@ -30,13 +33,13 @@ header
     a
       text-decoration: none
       color: #2c2727
-      font-size: 16px
+      font-size: 16px/16px*1em
       font-weight: 700
       min-height: 47px
 
     text-decoration: none
     color: #2c2727
-    font-size: 16px
+    font-size: 16px/16px*1em
     font-weight: 700
     min-height: 47px
 
@@ -108,7 +111,7 @@ header
         text-align: center
 
         > a
-          font-size: 14px
+          font-size: 14px/16px*1em
           text-decoration: none
           font-weight: 700
           display: block
@@ -138,7 +141,7 @@ header
     text-align: center
     line-height: 19px
     border-radius: 50%
-    font-size: 12px
+    font-size: 12px/16px*1em
     right: 0
     position: absolute
     top: 7px
@@ -166,7 +169,7 @@ header
     list-style: none
     display: flex
     align-items: center
-    font-size: 14px
+    font-size: 14px/16px*1em
     line-height: 1.5
     justify-content: space-between
     margin-bottom: 5px
@@ -174,7 +177,7 @@ header
 .cart-sum
   display: flex
   justify-content: space-between
-  font-size: 14px
+  font-size: 14px/16px*1em
   font-weight: bold
   margin-top: 11px
 
@@ -186,7 +189,7 @@ header
     text-decoration: none
     text-align: center
     line-height: 25px
-    font-size: 14px
+    font-size: 14px/16px*1em
     margin-top: 20px
 
     &:hover
@@ -218,7 +221,7 @@ aside
       width: 100%
       font-style: italic
       font-family: inherit
-      font-size: 12px
+      font-size: 12px/16px*1em
       height: 50px
       padding-left: 45px
 
@@ -252,7 +255,7 @@ aside
     align-items: center
     margin-bottom: 2px
     color: #2c2727
-    font-size: 14px
+    font-size: 14px/16px*1em
     text-decoration: none
     padding-left: 30px
 
@@ -260,9 +263,6 @@ aside
     padding-left: 15px
     background-color: #f6f4f4
     font-weight: 700
-
-.active
-    background-color: #2c2727
 
 .main .right
     flex: 1
@@ -281,6 +281,9 @@ aside
             grid-area: 4/1/5/2
             display: flex
             bottom: 0
+
+            .active
+              background-color: #2c2727
 
             .circle
                 width: 10px
@@ -382,7 +385,7 @@ aside
 
   span
     font-weight: 700
-    font-size: 16px
+    font-size: 16px/16px*1em
     margin-top: 16px
 
 .categories
@@ -401,7 +404,7 @@ aside
       text-align: center
       height: 80px
       display: block
-      font-size: 16px
+      font-size: 16px/16px*1em
       font-weight: 700
       padding-top: 20px
 
@@ -419,7 +422,7 @@ aside
   a
     text-decoration: none
     color: #2c2727
-    font-size: 16px
+    font-size: 16px/16px*1em
     line-height: 18px
     font-weight: 700
 
@@ -444,16 +447,22 @@ aside
   display: flex
   flex-direction: column
   margin-top: 80px
+  margin-bottom: 80px
+
+  .container
+    max-width: 950px
+    width: 100%
 
   .top
     display: grid
     grid-template-columns: 49% 49%
     grid-column-gap: 40px
     position: relative
-    height: 100%
-    max-height: 30px
 
-    .new
+    .button__active
+      border-bottom: 3px solid #ff7517 !important
+
+    .new__button
       grid-area: 1/1/2/2
       align-self: start
       justify-self: end
@@ -462,13 +471,13 @@ aside
       position: relative
       z-index: 10
       margin: 0
-      padding-bottom: 30px
+      padding-bottom: 20px
 
-    .new:hover
+    .new__button:hover
       border-bottom: 3px solid #ff7517
       cursor: pointer
 
-    .hits
+    .hits__button
       grid-area: 1/2/2/3
       align-self: start
       justify-self: start
@@ -477,9 +486,9 @@ aside
       position: relative
       z-index: 10
       margin: 0
-      padding-bottom: 30px
+      padding-bottom: 20px
 
-    .hits:hover
+    .hits__button:hover
       border-bottom: 3px solid #ff7517
       cursor: pointer
 
@@ -492,16 +501,148 @@ aside
       position: absolute
       z-index: 9
 
-  .populars__containers
+  .more__button__container
     display: flex
-    overflow-x: scroll
+    position: relative
+
+    .circle__more
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #3e3939
+      display: grid
+      position: absolute
+      align-self: center
+      z-index: 11
+      right: -25px
+
+      svg
+        align-self: center  
+        justify-self: center
+        max-width: 15px
+        fill: #ffffff
+
+    .populars__containers
+      display: flex
+      overflow-x: scroll
+      margin-top: 25px
+      scroll-behavior: smooth
+
+      .popular__container
+        max-width: 230px
+        margin-left: 10px
+
+        .ramka
+          display: grid
+          grid-template-columns: 50% 50%
+          grid-row-gap: 20px
+          padding: 10px 15px 0 15px
+          border: 1px solid #3e3939
+          border-bottom: none
+
+          .stars
+            grid-area: 1/1/2/2
+            display: flex
+
+            svg
+              fill: #ff7517
+              width: 12px
+
+          .diagram
+            max-width: 24px
+            width: 100%
+            grid-area: 1/2/2/3
+
+          .image__tovar
+            grid-area: 2/1/3/3
+            position: relative
+            display: grid
+
+            p
+              position: absolute
+              align-self: start
+              justify-self: start
+              z-index: 2
+
+            img
+              width: 60%
+              position: relative
+              z-index: 1
+              justify-self: center
+
+          .about__tovar
+            grid-area: 3/1/4/3
+            display: flex
+            flex-direction: column
+
+            h3
+              font-size: 16px/16px*1em
+              font-weight: 600
+              margin-bottom: 23px
+
+            .haracter
+              display: flex
+              flex-direction: column
+              margin-bottom: 34px
+
+              p
+                font-size: 12px/16px*1em
+                font-weight: 300
+
+                .bold
+                  font-size: 12px/16px*1em
+                  font-weight: 600
+
+            .cost
+              color: #2c2727
+              font-size: 16px/16px*1em
+              font-weight: 600
+              margin-bottom: 25px
+          
+        .buy
+          display: grid
+          grid-template-columns: 70% 30%
+          align-items: center
+
+          span
+            height: 36px
+            width: 100%
+            border: 1px solid #ff7517
+            display: flex
+            align-content: center
+            justify-content: center
+
+            p
+              color: #2c2727
+              font-size: 16px/16px*1em
+              font-weight: 400
+              align-self: center
+
+              svg
+                max-width: 28px
+                height: 100%
+                align-self: center
+
+          span:first-child
+            border-right: none
+
+        .buy:hover
+          cursor: pointer
+
+      .popular__container:first-child
+        margin-left: 0
+
+    .populars__containers::-webkit-scrollbar
+      height: 0px
+      width: 0px
+
+  
 
 
-    
 
 .about
   color: #f6f4f4
-  font-size: 18px
+  font-size: 18px/16px*1em
   position: relative
   padding-bottom: 40px
 
@@ -527,7 +668,7 @@ aside
 
   h1
     color: #000
-    font-size: 24px
+    font-size: 24px/16px*1em
     margin-bottom: 55px
 
 .about-img
@@ -549,18 +690,19 @@ aside
   padding-top: 80px
 
   p
-    font-size: 18px
+    font-size: 18px/16px*1em
     margin: 30px 0
     color: #000
 
 .faq-list__item-title
-  font-size: 18px
+  font-size: 18px/16px*1em
   font-weight: 700
   padding-left: 65px
   line-height: 27px
   margin-bottom: 35px
   position: relative
   cursor: pointer
+  transition-duration: 1s
 
   &:before
     content: ''
@@ -585,13 +727,108 @@ aside
   display: block
 
 h2
-  font-size: 24px
+  font-size: 24px/16px*1em
   margin-bottom: 35px
 
 .reviews
   background-color: #f6f4f4
   padding-top: 35px
   padding-bottom: 105px
+
+  .container-right
+    display: grid
+    grid-row-gap: 60px
+    position: relative
+
+    .otzyv__containers
+      display: flex
+      justify-content: space-between
+
+      .active
+        transform: scale(1.5)
+
+      .activeLeft
+        transform: scale(1.5) translateX(90%)
+
+      .activeRight
+        transform: scale(1.5) translateX(-90%)
+
+      .otzyv
+        display: grid
+        justify-items: center
+        max-width: 256px/950px*100%
+        width: 256px
+        transition-duration: 1s
+
+        img
+          grid-area: 1/1/3/2
+          align-self: start
+          position: relative
+          z-index: 2
+
+        .otzyv__text
+          position: relative
+          border: 1px solid #2c2727
+          z-index: 1
+          display: grid
+          grid-area: 2/1/4/2
+          margin-top: 10px
+          padding: 38px 9px 48px 9px
+          background-color: #f6f4f4
+
+          h3
+            text-align: center
+            grid-area: 1/1/2/2
+            font-size: 12px/16px*1em
+
+          .dots
+            grid-area: 2/1/3/2
+            display: flex
+            justify-content: center
+
+            .dot
+              width: 3px
+              height: 3px
+              border-radius: 50%
+              margin-left: 3px
+              background-color: #2c2727
+              margin-top: 10px
+
+            .dot:first-child
+              margin-left: 0
+
+          .main__text
+            margin-top: 15px
+            p
+              font-size: 10px
+              font-weight: 400
+
+          .dostoinstva
+            margin-top: 7px
+            p
+              font-size: 10px
+              font-weight: 400
+
+              .bold
+                font-weight: 600
+
+    .dots__indicators
+      display: flex
+      justify-self: center
+      margin-top: 60px
+
+      .active
+        background-color: #2c2727
+
+      .circle
+          width: 10px
+          height: 10px
+          border: 1px solid #2c2727
+          border-radius: 50%
+          margin-left: 7px          
+
+          
+
 
 footer
   background-color: #3e3939
@@ -605,7 +842,7 @@ footer
   .phones a
     display: block
     line-height: 30px
-    font-size: 16px
+    font-size: 16px/16px*1em
 
   a
     color: #f6f4f4
@@ -633,7 +870,7 @@ footer
       color: #f6f4f4
       text-decoration: none
       padding: 6px 0
-      font-size: 16px
+      font-size: 16px/16px*1em
       display: block
 
   img.logo
@@ -679,7 +916,7 @@ footer
       background: none
       border: 1px solid #fff
       color: #fff
-      font-size: 12px
+      font-size: 12px/16px*1em
       padding-left: 12px
       margin-bottom: 5px
 

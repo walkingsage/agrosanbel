@@ -5,6 +5,9 @@
   outline: none;
   box-sizing: border-box; }
 
+html {
+  overflow: hidden; }
+
 body {
   font-family: "Futura", Arial, sans-serif;
   font-weight: 400;
@@ -26,13 +29,13 @@ header .top {
   background-color: #f6f4f4;
   text-decoration: none;
   color: #2c2727;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   min-height: 47px; }
   header .top a {
     text-decoration: none;
     color: #2c2727;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     min-height: 47px; }
 header a:hover {
@@ -86,7 +89,7 @@ header .logo img {
       flex: auto;
       text-align: center; }
       .dark nav > ul > li > a {
-        font-size: 14px;
+        font-size: 0.875em;
         text-decoration: none;
         font-weight: 700;
         display: block;
@@ -114,7 +117,7 @@ header .logo img {
     text-align: center;
     line-height: 19px;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 0.75em;
     right: 0;
     position: absolute;
     top: 7px; }
@@ -140,7 +143,7 @@ header .logo img {
   list-style: none;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.5;
   justify-content: space-between;
   margin-bottom: 5px; }
@@ -148,7 +151,7 @@ header .logo img {
 .cart-sum {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: bold;
   margin-top: 11px; }
 
@@ -159,7 +162,7 @@ header .logo img {
   text-decoration: none;
   text-align: center;
   line-height: 25px;
-  font-size: 14px;
+  font-size: 0.875em;
   margin-top: 20px; }
   .cart a:hover {
     color: #fff; }
@@ -185,7 +188,7 @@ aside {
     width: 100%;
     font-style: italic;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 0.75em;
     height: 50px;
     padding-left: 45px; }
   .search input[type="submit"] {
@@ -215,16 +218,13 @@ aside a {
   align-items: center;
   margin-bottom: 2px;
   color: #2c2727;
-  font-size: 14px;
+  font-size: 0.875em;
   text-decoration: none;
   padding-left: 30px; }
 aside > ul > li > a {
   padding-left: 15px;
   background-color: #f6f4f4;
   font-weight: 700; }
-
-.active {
-  background-color: #2c2727; }
 
 .main .right {
   flex: 1; }
@@ -241,6 +241,8 @@ aside > ul > li > a {
       grid-area: 4/1/5/2;
       display: flex;
       bottom: 0; }
+      .main .right #carousel .carousel__indikators .active {
+        background-color: #2c2727; }
       .main .right #carousel .carousel__indikators .circle {
         width: 10px;
         height: 10px;
@@ -322,7 +324,7 @@ aside > ul > li > a {
     align-items: center; }
   .advantages span {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
     margin-top: 16px; }
 
 .categories {
@@ -339,7 +341,7 @@ aside > ul > li > a {
       text-align: center;
       height: 80px;
       display: block;
-      font-size: 16px;
+      font-size: 1em;
       font-weight: 700;
       padding-top: 20px; }
     .categories a:hover span {
@@ -355,7 +357,7 @@ aside > ul > li > a {
   .manufactures-list__item a {
     text-decoration: none;
     color: #2c2727;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 18px;
     font-weight: 700; }
     .manufactures-list__item a:hover {
@@ -375,15 +377,19 @@ aside > ul > li > a {
 .popular__hits {
   display: flex;
   flex-direction: column;
-  margin-top: 80px; }
+  margin-top: 80px;
+  margin-bottom: 80px; }
+  .popular__hits .container {
+    max-width: 950px;
+    width: 100%; }
   .popular__hits .top {
     display: grid;
     grid-template-columns: 49% 49%;
     grid-column-gap: 40px;
-    position: relative;
-    height: 100%;
-    max-height: 30px; }
-    .popular__hits .top .new {
+    position: relative; }
+    .popular__hits .top .button__active {
+      border-bottom: 3px solid #ff7517 !important; }
+    .popular__hits .top .new__button {
       grid-area: 1/1/2/2;
       align-self: start;
       justify-self: end;
@@ -392,11 +398,11 @@ aside > ul > li > a {
       position: relative;
       z-index: 10;
       margin: 0;
-      padding-bottom: 30px; }
-    .popular__hits .top .new:hover {
+      padding-bottom: 20px; }
+    .popular__hits .top .new__button:hover {
       border-bottom: 3px solid #ff7517;
       cursor: pointer; }
-    .popular__hits .top .hits {
+    .popular__hits .top .hits__button {
       grid-area: 1/2/2/3;
       align-self: start;
       justify-self: start;
@@ -405,8 +411,8 @@ aside > ul > li > a {
       position: relative;
       z-index: 10;
       margin: 0;
-      padding-bottom: 30px; }
-    .popular__hits .top .hits:hover {
+      padding-bottom: 20px; }
+    .popular__hits .top .hits__button:hover {
       border-bottom: 3px solid #ff7517;
       cursor: pointer; }
     .popular__hits .top .line {
@@ -417,13 +423,119 @@ aside > ul > li > a {
       align-self: end;
       position: absolute;
       z-index: 9; }
-  .popular__hits .populars__containers {
+  .popular__hits .more__button__container {
     display: flex;
-    overflow-x: scroll; }
+    position: relative; }
+    .popular__hits .more__button__container .circle__more {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #3e3939;
+      display: grid;
+      position: absolute;
+      align-self: center;
+      z-index: 11;
+      right: -25px; }
+      .popular__hits .more__button__container .circle__more svg {
+        align-self: center;
+        justify-self: center;
+        max-width: 15px;
+        fill: #ffffff; }
+    .popular__hits .more__button__container .populars__containers {
+      display: flex;
+      overflow-x: scroll;
+      margin-top: 25px;
+      scroll-behavior: smooth; }
+      .popular__hits .more__button__container .populars__containers .popular__container {
+        max-width: 230px;
+        margin-left: 10px; }
+        .popular__hits .more__button__container .populars__containers .popular__container .ramka {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-row-gap: 20px;
+          padding: 10px 15px 0 15px;
+          border: 1px solid #3e3939;
+          border-bottom: none; }
+          .popular__hits .more__button__container .populars__containers .popular__container .ramka .stars {
+            grid-area: 1/1/2/2;
+            display: flex; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .stars svg {
+              fill: #ff7517;
+              width: 12px; }
+          .popular__hits .more__button__container .populars__containers .popular__container .ramka .diagram {
+            max-width: 24px;
+            width: 100%;
+            grid-area: 1/2/2/3; }
+          .popular__hits .more__button__container .populars__containers .popular__container .ramka .image__tovar {
+            grid-area: 2/1/3/3;
+            position: relative;
+            display: grid; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .image__tovar p {
+              position: absolute;
+              align-self: start;
+              justify-self: start;
+              z-index: 2; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .image__tovar img {
+              width: 60%;
+              position: relative;
+              z-index: 1;
+              justify-self: center; }
+          .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar {
+            grid-area: 3/1/4/3;
+            display: flex;
+            flex-direction: column; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar h3 {
+              font-size: 1em;
+              font-weight: 600;
+              margin-bottom: 23px; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar .haracter {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 34px; }
+              .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar .haracter p {
+                font-size: 0.75em;
+                font-weight: 300; }
+                .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar .haracter p .bold {
+                  font-size: 0.75em;
+                  font-weight: 600; }
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .about__tovar .cost {
+              color: #2c2727;
+              font-size: 1em;
+              font-weight: 600;
+              margin-bottom: 25px; }
+        .popular__hits .more__button__container .populars__containers .popular__container .buy {
+          display: grid;
+          grid-template-columns: 70% 30%;
+          align-items: center; }
+          .popular__hits .more__button__container .populars__containers .popular__container .buy span {
+            height: 36px;
+            width: 100%;
+            border: 1px solid #ff7517;
+            display: flex;
+            align-content: center;
+            justify-content: center; }
+            .popular__hits .more__button__container .populars__containers .popular__container .buy span p {
+              color: #2c2727;
+              font-size: 1em;
+              font-weight: 400;
+              align-self: center; }
+              .popular__hits .more__button__container .populars__containers .popular__container .buy span p svg {
+                max-width: 28px;
+                height: 100%;
+                align-self: center; }
+          .popular__hits .more__button__container .populars__containers .popular__container .buy span:first-child {
+            border-right: none; }
+        .popular__hits .more__button__container .populars__containers .popular__container .buy:hover {
+          cursor: pointer; }
+      .popular__hits .more__button__container .populars__containers .popular__container:first-child {
+        margin-left: 0; }
+    .popular__hits .more__button__container .populars__containers::-webkit-scrollbar {
+      height: 0px;
+      width: 0px; }
 
 .about {
   color: #f6f4f4;
-  font-size: 18px;
+  font-size: 1.125em;
   position: relative;
   padding-bottom: 40px; }
   .about:before {
@@ -445,7 +557,7 @@ aside > ul > li > a {
     text-align: justify; }
   .about h1 {
     color: #000;
-    font-size: 24px;
+    font-size: 1.5em;
     margin-bottom: 55px; }
 
 .about-img {
@@ -465,18 +577,19 @@ aside > ul > li > a {
 .faq {
   padding-top: 80px; }
   .faq p {
-    font-size: 18px;
+    font-size: 1.125em;
     margin: 30px 0;
     color: #000; }
 
 .faq-list__item-title {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
   padding-left: 65px;
   line-height: 27px;
   margin-bottom: 35px;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  transition-duration: 1s; }
   .faq-list__item-title:before {
     content: "";
     position: absolute;
@@ -500,13 +613,87 @@ aside > ul > li > a {
   display: block; }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5em;
   margin-bottom: 35px; }
 
 .reviews {
   background-color: #f6f4f4;
   padding-top: 35px;
   padding-bottom: 105px; }
+  .reviews .container-right {
+    display: grid;
+    grid-row-gap: 60px;
+    position: relative; }
+    .reviews .container-right .otzyv__containers {
+      display: flex;
+      justify-content: space-between; }
+      .reviews .container-right .otzyv__containers .active {
+        transform: scale(1.5); }
+      .reviews .container-right .otzyv__containers .activeLeft {
+        transform: scale(1.5) translateX(90%); }
+      .reviews .container-right .otzyv__containers .activeRight {
+        transform: scale(1.5) translateX(-90%); }
+      .reviews .container-right .otzyv__containers .otzyv {
+        display: grid;
+        justify-items: center;
+        max-width: 26.9473684211%;
+        width: 256px;
+        transition-duration: 1s; }
+        .reviews .container-right .otzyv__containers .otzyv img {
+          grid-area: 1/1/3/2;
+          align-self: start;
+          position: relative;
+          z-index: 2; }
+        .reviews .container-right .otzyv__containers .otzyv .otzyv__text {
+          position: relative;
+          border: 1px solid #2c2727;
+          z-index: 1;
+          display: grid;
+          grid-area: 2/1/4/2;
+          margin-top: 10px;
+          padding: 38px 9px 48px 9px;
+          background-color: #f6f4f4; }
+          .reviews .container-right .otzyv__containers .otzyv .otzyv__text h3 {
+            text-align: center;
+            grid-area: 1/1/2/2;
+            font-size: 0.75em; }
+          .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dots {
+            grid-area: 2/1/3/2;
+            display: flex;
+            justify-content: center; }
+            .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dots .dot {
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              margin-left: 3px;
+              background-color: #2c2727;
+              margin-top: 10px; }
+            .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dots .dot:first-child {
+              margin-left: 0; }
+          .reviews .container-right .otzyv__containers .otzyv .otzyv__text .main__text {
+            margin-top: 15px; }
+            .reviews .container-right .otzyv__containers .otzyv .otzyv__text .main__text p {
+              font-size: 10px;
+              font-weight: 400; }
+          .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dostoinstva {
+            margin-top: 7px; }
+            .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dostoinstva p {
+              font-size: 10px;
+              font-weight: 400; }
+              .reviews .container-right .otzyv__containers .otzyv .otzyv__text .dostoinstva p .bold {
+                font-weight: 600; }
+    .reviews .container-right .dots__indicators {
+      display: flex;
+      justify-self: center;
+      margin-top: 60px; }
+      .reviews .container-right .dots__indicators .active {
+        background-color: #2c2727; }
+      .reviews .container-right .dots__indicators .circle {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #2c2727;
+        border-radius: 50%;
+        margin-left: 7px; }
 
 footer {
   background-color: #3e3939;
@@ -518,7 +705,7 @@ footer {
   footer .phones a {
     display: block;
     line-height: 30px;
-    font-size: 16px; }
+    font-size: 1em; }
   footer a {
     color: #f6f4f4;
     text-decoration: none; }
@@ -539,7 +726,7 @@ footer {
       color: #f6f4f4;
       text-decoration: none;
       padding: 6px 0;
-      font-size: 16px;
+      font-size: 1em;
       display: block; }
   footer img.logo {
     max-width: 200px; }
@@ -574,7 +761,7 @@ footer {
       background: none;
       border: 1px solid #fff;
       color: #fff;
-      font-size: 12px;
+      font-size: 0.75em;
       padding-left: 12px;
       margin-bottom: 5px; }
   footer input[type="submit"] {

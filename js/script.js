@@ -17,10 +17,30 @@ $(document).ready(function() {
 
 });
 
-let indexCarousel = 0;
+let indexCarousel = 0,
+indexOtzyv = 0;
 
 const carousetItems = document.querySelectorAll('.carusel__container'),
-indikatorsContainer = document.querySelector('.carousel__indikators');
+indikatorsContainer = document.querySelector('.carousel__indikators'),
+moreCircle = document.querySelector('.circle__more'),
+popularsContainers = document.querySelector('.populars__containers'),
+otzyv = document.querySelectorAll('.otzyv'),
+dotsIndicators = document.querySelector('.dots__indicators'),
+burger = document.querySelector('.burger'),
+menu = document.querySelector('.dark > .container');
+
+let menuopen = false;
+
+burger.addEventListener('click', () => {
+    if(!menuopen){
+        $('.dark > .container').height('auto');
+        menuopen = true;
+    }
+    else{
+        $('.dark > .container').height('50px');
+        menuopen = false;
+    }
+});
 
 for(let i = 0; i<carousetItems.length; i++){
     if(i == 0){
@@ -31,8 +51,57 @@ for(let i = 0; i<carousetItems.length; i++){
     }
 }
 
+for(let i = 0; i<otzyv.length; i++){
+    if(i == 1){
+        dotsIndicators.insertAdjacentHTML('beforeend', '<span class="circle active"></span>');
+    }
+    else{
+        dotsIndicators.insertAdjacentHTML('beforeend', '<span class="circle"></span>');
+    }
+}
+
 const indicators = document.querySelectorAll('.carousel__indikators > .circle');
 
+const indicatorsDots = document.querySelectorAll('.dots__indicators > .circle');
+
+let indexAcriveOtzyv = 1;
+
+otzyv.forEach((element,index) => {
+    if(element.classList.contains('active')){
+        indexAcriveOtzyv = index;
+        for(let i=0; i<otzyv.length;i++){
+            if(i == indexAcriveOtzyv || i == indexAcriveOtzyv + 1 || i == indexAcriveOtzyv - 1){
+                continue;
+            }
+            else{
+                otzyv[i].style.display = "none";
+            }
+        }
+    }
+    element.addEventListener('click',() => {
+        indexOtzyv = index;
+        for(let i = 0; i<otzyv.length;i++){
+            if(i == index){
+                indicatorsDots[i].classList.add('active');
+                if(indexOtzyv < indexAcriveOtzyv){
+                    otzyv[indexOtzyv].classList.add('activeLeft');
+                    otzyv[indexOtzyv+1].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvLeft";
+                    otzyv[indexOtzyv+2].style.animation = "1s cubic-bezier(0.26, 0.45, 0.6, 0.93) 0s 1 forwards otzyvHideRight";
+                }
+                else{
+                    otzyv[indexOtzyv].style.animation = "none";
+                    otzyv[indexOtzyv].classList.add('activeRight');
+                }
+            }
+            else{
+                indicatorsDots[i].classList.remove('active');
+                otzyv[i].classList.remove('activeLeft');
+                otzyv[i].classList.remove('activeRight');
+                otzyv[i].classList.remove('active');
+            }
+        }
+    });
+});
 
 let carouselMove = () => {
     indexCarousel++;
@@ -89,3 +158,50 @@ indicators.forEach((element,index) => {
     });
 });
 
+const popularContainer = document.querySelectorAll('.new'),
+popularContainerHit = document.querySelectorAll('.hit'),
+newButton = document.querySelector('.new__button'),
+hitsButton = document.querySelector('.hits__button');
+
+newButton.classList.add('button__active');
+
+for(let i = 0; i < popularContainerHit.length; i++){
+    popularContainerHit[i].style.display = "none";
+}
+
+let scrollVal = 0;
+let maxval = popularContainer.length * 140;
+
+newButton.addEventListener('click', () => {
+    maxval = popularContainer.length * 140;
+    newButton.classList.add('button__active');
+    hitsButton.classList.remove('button__active');
+    for(let i = 0; i < popularContainerHit.length; i++){
+        popularContainerHit[i].style.display = "none";
+    }  
+    for(let i = 0; i < popularContainer.length; i++){
+        popularContainer[i].style.display = "block";
+    }
+});
+
+hitsButton.addEventListener('click', () => {
+    newButton.classList.remove('button__active');
+    hitsButton.classList.add('button__active');
+    for(let i = 0; i < popularContainer.length; i++){
+        popularContainer[i].style.display = "none";
+    }
+    for(let i = 0; i < popularContainerHit.length; i++){
+        popularContainerHit[i].style.display = "block";
+    }        
+    maxval = popularContainerHit.length * 140;
+});
+
+moreCircle.addEventListener('click', () => {
+    scrollVal = scrollVal + 218;
+    if (scrollVal >= maxval) {
+        scrollVal = 0;
+    }
+    $('.populars__containers').scrollLeft(scrollVal);
+    console.log(scrollVal);
+    console.log(popularContainer.length);
+});
