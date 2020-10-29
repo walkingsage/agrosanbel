@@ -175,7 +175,10 @@
     font-size: 8px !important; }
 
   .otzyv__text {
-    padding-bottom: 20px !important; } }
+    padding-bottom: 20px !important; }
+
+  .reviews .container-right .otzyv__containers .otzyv img {
+    width: 30%; } }
 @media screen and (max-width: 360px) {
   header .logo img {
     max-width: 150px !important; }
