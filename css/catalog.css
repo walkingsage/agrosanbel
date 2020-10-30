@@ -17,6 +17,8 @@
           font-size: 16px;
           font-weight: 700;
           align-self: center; }
+        .filter .form__content .filter__name .section__title .active {
+          transform: rotateY(360deg) rotateX(360deg) !important; }
         .filter .form__content .filter__name .section__title .treugolnik {
           background: rgba(0, 0, 0, 0);
           border-radius: 10px;
@@ -24,7 +26,8 @@
           position: relative;
           color: rgba(0, 0, 0, 0);
           transition-duration: 1s;
-          align-self: center; }
+          align-self: center;
+          transform: rotateY(180deg) rotateX(180deg); }
         .filter .form__content .filter__name .section__title .treugolnik::after {
           content: "";
           position: absolute;
@@ -225,10 +228,19 @@
             position: absolute;
             top: 18px;
             background: #ffffff;
-            width: 199px; }
+            width: 100%;
+            border: 1px solid #0a0a0a;
+            border-radius: 10px; }
             #right .container__right .catalog__content .content__menu .sortirovka .variants li {
               list-style: none;
-              text-align: right; }
+              text-align: right;
+              margin-bottom: 10px;
+              padding: 10px 0;
+              border-bottom: 1px solid #0a0a0a;
+              padding-right: 20px; }
+            #right .container__right .catalog__content .content__menu .sortirovka .variants li:last-child {
+              margin-bottom: 0;
+              border-bottom: none; }
             #right .container__right .catalog__content .content__menu .sortirovka .variants li:hover {
               color: #0a0a0a; }
           #right .container__right .catalog__content .content__menu .sortirovka i {
@@ -262,6 +274,8 @@
               height: 4px;
               width: 100%;
               background: #dfdede; }
+          #right .container__right .catalog__content .content__menu .view .active .line {
+            background: #0a0a0a; }
           #right .container__right .catalog__content .content__menu .view .rows:hover {
             cursor: pointer; }
             #right .container__right .catalog__content .content__menu .view .rows:hover .line {
@@ -279,6 +293,8 @@
               width: 100%;
               height: 100%;
               background-color: #dfdede; }
+          #right .container__right .catalog__content .content__menu .view .active .kvadrat {
+            background: #0a0a0a; }
           #right .container__right .catalog__content .content__menu .view .columns:hover {
             cursor: pointer; }
             #right .container__right .catalog__content .content__menu .view .columns:hover .kvadrat {
@@ -355,7 +371,9 @@
                   text-align: center;
                   font-size: 20px;
                   font-weight: 700; }
-                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo #kolvo {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo .min:hover {
+                  cursor: pointer; }
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo .kolvo__input {
                   width: 100%;
                   height: 100%;
                   border: 1px solid #000000;
@@ -371,6 +389,8 @@
                   text-align: center;
                   font-size: 20px;
                   font-weight: 700; }
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo .plu:hover {
+                  cursor: pointer; }
               #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom img {
                 grid-area: 1/2/2/3;
                 max-width: 24px;
@@ -530,6 +550,10 @@
               display: grid;
               align-items: center;
               justify-items: center; }
+            #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .pages .number__page:hover {
+              cursor: pointer;
+              border: none !important;
+              background-color: #ff7517; }
           #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .prev, #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .next {
             width: 30px;
             height: 30px;
@@ -539,6 +563,9 @@
             display: grid;
             align-items: center;
             justify-items: center; }
+          #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .prev:hover, #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .next:hover {
+            cursor: pointer;
+            background-color: #ff7517; }
           #right .container__right .catalog__content .tovars .kolvo__info .nav__tovars .prev span {
             border: solid black;
             border-width: 0 2px 2px 0;

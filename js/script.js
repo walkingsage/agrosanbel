@@ -27,8 +27,7 @@ popularsContainers = document.querySelector('.populars__containers'),
 otzyv = document.querySelectorAll('.otzyv'),
 dotsIndicators = document.querySelector('.dots__indicators'),
 burger = document.querySelector('.burger'),
-menu = document.querySelector('.dark > .container'),
-rowTovar = document.querySelectorAll('.catalog__container__row');
+menu = document.querySelector('.dark > .container');
 
 let menuopen = false;
 
@@ -43,9 +42,6 @@ burger.addEventListener('click', () => {
     }
 });
 
-rowTovar.forEach(element => {
-    element.style.display = "none";
-});
 
 for(let i = 0; i<carousetItems.length; i++){
     if(i == 0){

@@ -163,14 +163,14 @@
                     </ul>
                 </div>
                 <div class="filter">
-                    <form>
+                    <form id="search__filter">
                         <div class="form__content">
                             <div class="cost filter__name">
                                 <div class="section__title">
                                     <h3>Цена</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="cost__content section__content">
+                                <div style="display: none;" class="cost__content section__content">
                                     <div class="top">
                                         <input type="text" id="cost__of" value="0"> 
                                         <span class="line"></span>
@@ -188,7 +188,7 @@
                                     <h3>Производительность</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="productivity__content section__content">
+                                <div style="display: none;" class="productivity__content section__content">
                                     <div class="productivity__value">
                                         <input name="productivity" id="productivity__input__1" class="productivity__input" type="radio" value="10кв">
                                         <label for="productivity__input__1">10кв</label>
@@ -220,7 +220,7 @@
                                     <h3>Мощность, л.с.</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="power__content section__content">
+                                <div style="display: none;" class="power__content section__content">
                                     <div class="power__value">
                                         <input name="power" id="power__input" class="power__input" type="radio" value="8">
                                         <label for="power__input">8</label>
@@ -256,7 +256,7 @@
                                     <h3>Тип двигателя</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="engine__content section__content">
+                                <div style="display: none;" class="engine__content section__content">
                                     <div class="engine__value">
                                         <input name="engine" id="engine__input" class="engine__input" type="radio" value="Бензиновый 2-х тактный">
                                         <label for="engine__input">Бензиновый 2-х тактный</label>
@@ -280,7 +280,7 @@
                                     <h3>Передачи</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="passing__content section__content">
+                                <div style="display: none;" class="passing__content section__content">
                                     <div class="passing__value">
                                         <input name="passing" id="passing__input" class="passing__input" type="radio" value="2">
                                         <label for="passing__input">2</label>
@@ -304,7 +304,7 @@
                                     <h3>Вес</h3>
                                     <span class="treugolnik"></span>
                                 </div>
-                                <div class="weight__content section__content">
+                                <div style="display: none;" class="weight__content section__content">
                                     <div class="weight__value">
                                         <input name="weight" id="weight__input" class="weight__input" type="radio" value="2">
                                         <label for="weight__input">2</label>
@@ -491,7 +491,7 @@
                             </div>
                             <div class="view">
                                 <h4>Вид:</h4>
-                                <div class="rows">
+                                <div class="rows active">
                                     <span class="line"></span>
                                     <span class="line"></span>
                                     <span class="line"></span>
@@ -505,7 +505,7 @@
                             </div>
                         </div>
                         <div class="tovars">
-                            <div class="catalog__containers__column">
+                            <div class="catalog__containers__column views__containers">
                                 <div class="catalog__container__row">
                                     <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
                                     <div class="center">
@@ -531,7 +531,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -567,7 +567,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -603,7 +603,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -639,7 +639,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -675,7 +675,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -686,7 +686,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="display: none;" class="catalog__container__row">
+                                <div class="catalog__container__row">
                                     <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
                                     <div class="center">
                                         <div class="top">
@@ -711,7 +711,7 @@
                                         <div class="bottom">
                                             <div class="kolvo">
                                                 <div class="min">-</div>
-                                                <input type="text" name="kolvo" id="kolvo" value="1">
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
                                                 <div class="plu">+</div>
                                             </div>
                                             <img class="diagram" src="img/graph.svg" alt="График">
@@ -877,6 +877,1119 @@
                                         <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
                                     </div>
                                 </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__row">
+                                    <img class="tovar__photo" src="img/motorblock.jpg" alt="Мотоблок">
+                                    <div class="center">
+                                        <div class="top">
+                                            <h4>Мотоблок Shtenli 1030 Lite</h4>
+                                            <div class="stars">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                                <img src="img/star.png" alt="Звезда">
+                                            </div>
+                                            <h5>Есть в наличии</h5>
+                                        </div>
+                                        <div class="haracter">
+                                            <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                            <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                            <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                        </div>
+                                    </div>
+                                    <div class="right__cart">
+                                        <h4 class="price">1 296,00 р</h4>
+                                        <div class="bottom">
+                                            <div class="kolvo">
+                                                <div class="min">-</div>
+                                                <input type="text" name="kolvo" class="kolvo__input" value="1">
+                                                <div class="plu">+</div>
+                                            </div>
+                                            <img class="diagram" src="img/graph.svg" alt="График">
+                                            <a href="#" class="buy">
+                                                <span><p>Купить в 1 клик</p></span>
+                                                <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                                </div>
+                                <div class="catalog__container__column">
+                                    <div class="ramka">
+                                        <div class="stars">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                            <img src="img/star.png" alt="Звезда">
+                                        </div>
+                                        <img class="diagram" src="img/graph.svg" alt="График">
+                                        <div class="image__tovar">
+                                            <p>есть в наличии</p>
+                                            <img src="img/newtovar.png" alt="">
+                                        </div>
+                                        <div class="about__tovar">
+                                            <h3>Мотоблок Shtenli 1030 Lite</h3>
+                                            <div class="haracter">
+                                                <p><span class="bold">Мощность:</span> 8.5 л.с.</p>
+                                                <p><span class="bold">Тип двигателя:</span> бензиновый 4-тактный</p>
+                                                <p><span class="bold">Привод:</span> шестеренчатый</p>
+                                            </div>
+                                            <div class="cost">
+                                                <p>1 296,00 р</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        <span><p>Купить в 1 клик</p></span>
+                                        <span><svg height="26px" fill="#ff7517" viewBox="0 -31 512.00026 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/></svg></span>
+                                    </div>
+                            </div>
                             </div>
                             <div class="btn__more">
                                 <p>Показать еще</p> 
@@ -890,8 +2003,6 @@
                                         <span class="left__arrow"></span>
                                     </div>
                                     <div class="pages">
-                                        <div class="number__page active__page">1</div>
-                                        <div class="number__page">2</div>
                                     </div>
                                     <div class="next">
                                         <span class="right__arrow"></span>
@@ -1069,6 +2180,6 @@
                 " - $" + $( "#slider-range" ).slider( "values", 1 ) );
             } );
         </script>
-		<script src="js/script.js"></script>
+		<script src="js/catalog.js"></script>
 	</body>
 </html>
