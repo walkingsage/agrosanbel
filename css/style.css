@@ -211,9 +211,9 @@ aside {
     .search input[type="submit"]:hover {
       opacity: 1; }
 
-aside li {
+aside li, .navigation li {
   list-style: none; }
-aside a {
+aside a, .navigation a {
   border: 1px solid #3e3939;
   height: 48px;
   display: flex;
@@ -223,7 +223,7 @@ aside a {
   font-size: 0.875em;
   text-decoration: none;
   padding-left: 30px; }
-aside > ul > li > a {
+aside > ul > li > a, .navigation > ul > li > a {
   padding-left: 15px;
   background-color: #f6f4f4;
   font-weight: 700; }
