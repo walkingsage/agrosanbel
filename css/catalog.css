@@ -261,7 +261,7 @@
             #right .container__right .catalog__content .content__menu .view .rows .line {
               height: 4px;
               width: 100%;
-              background: #3e3939; }
+              background: #dfdede; }
           #right .container__right .catalog__content .content__menu .view .rows:hover {
             cursor: pointer; }
             #right .container__right .catalog__content .content__menu .view .rows:hover .line {
@@ -283,11 +283,11 @@
             cursor: pointer; }
             #right .container__right .catalog__content .content__menu .view .columns:hover .kvadrat {
               background: #0a0a0a; }
-      #right .container__right .catalog__content .tovars .catalog__containers {
+      #right .container__right .catalog__content .tovars .catalog__containers__row {
         margin-top: 40px;
         display: flex;
         flex-direction: column; }
-        #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row {
+        #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row {
           border: 1px solid #3e3939;
           display: grid;
           grid-template-columns: 26.8421052632% 50% 23.2631578947%;
@@ -295,56 +295,56 @@
           align-items: center;
           padding: 30px 0;
           margin-top: 8px; }
-          #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row img {
+          #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row img {
             max-width: 169px;
             width: 100%;
             grid-area: 1/1/2/2;
             justify-self: center; }
-          #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center {
+          #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center {
             grid-area: 1/2/2/3;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%; }
-            #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top {
+            #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top {
               display: grid;
               grid-template-rows: 50% 50%;
               grid-template-columns: 50% 50%; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top h4 {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top h4 {
                 grid-area: 1/1/2/3; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top .stars {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top .stars {
                 grid-area: 2/1/3/2; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top .stars img {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top .stars img {
                   max-width: 11px;
                   margin-left: 2px; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top .stars img:first-child {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top .stars img:first-child {
                   margin-left: 0; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .top h5 {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .top h5 {
                 color: green;
                 text-align: right;
                 grid-area: 2/1/3/2; }
-            #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .center .haracter .bold {
+            #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .center .haracter .bold {
               font-weight: 700; }
-          #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart {
+          #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart {
             grid-area: 1/3/2/4;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
             padding-right: 15px; }
-            #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .price {
+            #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .price {
               text-align: left; }
-            #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom {
+            #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom {
               display: grid;
               grid-template-columns: 50% 50%;
               grid-template-rows: 50% 50%; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .kolvo {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo {
                 grid-area: 1/1/2/2;
                 width: 95px;
                 height: 32px;
                 display: grid;
                 grid-template-columns: 21.5px 52px 21.5px; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .kolvo .min {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo .min {
                   grid-area: 1/1/2/2;
                   width: 100%;
                   height: 100%;
@@ -355,12 +355,12 @@
                   text-align: center;
                   font-size: 20px;
                   font-weight: 700; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .kolvo #kolvo {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo #kolvo {
                   width: 100%;
                   height: 100%;
                   border: 1px solid #000000;
                   text-align: center; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .kolvo .plu {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .kolvo .plu {
                   width: 100%;
                   height: 100%;
                   border-radius: 0 15px 15px 0;
@@ -371,36 +371,127 @@
                   text-align: center;
                   font-size: 20px;
                   font-weight: 700; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom img {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom img {
                 grid-area: 1/2/2/3;
                 max-width: 24px;
                 justify-self: end; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy {
                 grid-area: 2/1/3/3;
                 height: 50px;
                 display: grid;
                 grid-template-columns: 70% 30%;
                 align-items: center;
                 text-decoration: none; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy span {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy span {
                   height: 36px;
                   width: 100%;
                   border: 1px solid #ff7517;
                   display: flex;
                   align-content: center;
                   justify-content: center; }
-                  #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy span p {
+                  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy span p {
                     color: #2c2727;
                     font-size: 1em;
                     font-weight: 400;
                     align-self: center; }
-                  #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy span svg {
+                  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy span svg {
                     max-width: 28px;
                     height: 100%; }
-                #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy span:first-child {
+                #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy span:first-child {
                   border-right: none; }
-              #right .container__right .catalog__content .tovars .catalog__containers .catalog__container__row .right__cart .bottom .buy:hover {
+              #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .right__cart .bottom .buy:hover {
                 cursor: pointer; }
+      #right .container__right .catalog__content .tovars .catalog__containers__column {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 10px;
+        margin-top: 40px;
+        grid-column-gap: 10px; }
+        #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column {
+          max-width: 230px; }
+          #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-row-gap: 20px;
+            padding: 10px 15px 0 15px;
+            border: 1px solid #3e3939;
+            border-bottom: none; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .stars {
+              grid-area: 1/1/2/2;
+              display: flex; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .stars img {
+                max-width: 11px;
+                height: 11px;
+                align-self: center;
+                margin-left: 3px; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .stars img:first-child {
+                margin-left: 0; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .diagram {
+              max-width: 24px;
+              width: 100%;
+              grid-area: 1/2/2/3;
+              justify-self: end; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .image__tovar {
+              grid-area: 2/1/3/3;
+              position: relative;
+              display: grid; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .image__tovar p {
+                position: absolute;
+                align-self: start;
+                justify-self: start;
+                z-index: 2;
+                color: green; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .image__tovar img {
+                width: 60%;
+                position: relative;
+                z-index: 1;
+                justify-self: center; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar {
+              grid-area: 3/1/4/3;
+              display: flex;
+              flex-direction: column; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar h3 {
+                font-size: 1em;
+                font-weight: 600;
+                margin-bottom: 23px; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar .haracter {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 34px; }
+                #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar .haracter p {
+                  font-size: 0.75em;
+                  font-weight: 300;
+                  font-size: 0.75em;
+                  font-weight: 600; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar .cost {
+                color: #2c2727;
+                font-size: 1em;
+                font-weight: 600;
+                margin-bottom: 25px; }
+          #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            align-items: center; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy span {
+              height: 36px;
+              width: 100%;
+              border: 1px solid #ff7517;
+              display: flex;
+              align-content: center;
+              justify-content: center; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy span p {
+                color: #2c2727;
+                font-size: 1em;
+                font-weight: 400;
+                align-self: center; }
+              #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy span svg {
+                max-width: 28px;
+                height: 100%;
+                align-self: center; }
+            #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy span:first-child {
+              border-right: none; }
+          #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .buy:hover {
+            cursor: pointer; }
       #right .container__right .catalog__content .tovars .btn__more {
         width: 100%;
         height: 40px;
