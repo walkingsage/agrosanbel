@@ -462,7 +462,7 @@ aside > ul > li > a, .navigation > ul > li > a {
           .popular__hits .more__button__container .populars__containers .popular__container .ramka .stars {
             grid-area: 1/1/2/2;
             display: flex; }
-            .popular__hits .more__button__container .populars__containers .popular__container .ramka .stars svg {
+            .popular__hits .more__button__container .populars__containers .popular__container .ramka .stars img {
               fill: #ff7517;
               width: 12px; }
           .popular__hits .more__button__container .populars__containers .popular__container .ramka .diagram {

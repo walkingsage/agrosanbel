@@ -3,6 +3,27 @@
         display: grid;
         grid-template-columns: 220px 76%;
     }
+
+    #right .container__right .tovar__card .tovar__card__content{
+        grid-template-columns: 33% 47% 20% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .card__tovar__main {
+        grid-template-rows: 31px 30px 40px 50px 82px 112px !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info{
+        grid-row-gap: 47px !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers{
+        grid-row-gap: 12px !important;
+    }
+
+    #right .container__right .harakteristiks .top__nav .container__harakter{
+        font-size: 16px !important;
+    }
+
 }
 
 @media screen and (max-width: 998px){
@@ -55,9 +76,25 @@
     #main{
         padding: 0 10px 0 0;
     }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos{
+        grid-template-columns: 1fr 1fr !important;
+        grid-row-gap: 10px;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos img{
+        max-width: 55px !important;
+        justify-self: center;
+    }
 }
 
 @media screen and (max-width: 900px){
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos{
+        grid-template-columns: 1fr 1fr  1fr 1fr !important;
+        grid-row-gap: 10px;
+    }
+
     .right{
         max-width: 100% !important;
     }
@@ -88,8 +125,25 @@
 
 @media screen and (max-width: 768px){
 
+    #right .container__right .harakteristiks .top__nav .container__harakter{
+        font-size: 14px !important;
+    }
+
     .header__nav{
         display: none;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos{
+        grid-template-columns: 1fr 1fr !important;
+        grid-row-gap: 10px;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content{
+        grid-template-columns: 26% 54% 20% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .card__tovar__main .buy__kredit{
+        max-width: 85% !important;
     }
 
     .developers .name__tovars{
@@ -293,6 +347,130 @@
         height: 100% !important;
     }
 
+    #right .container__right .tovar__card .tovar__card__content {
+        grid-template-columns: 100% !important;
+        grid-row-gap: 20px;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .top p{
+        color: green;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .top img{
+        max-width: 25px;
+        align-self: flex-end;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos {
+        width: 100% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos img{
+        width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos{
+        grid-template-columns: repeat(4,1fr) !important;
+        margin-top: 20px !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .tovar__photos .more__photos img {
+        max-width: 90% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .card__tovar__main{
+        width: 100% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .card__tovar__main .buy__kredit {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info {
+        width: 100% !important;
+        grid-template-rows: auto !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .top{
+        display: none !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers{
+        grid-template-rows: auto !important;
+        grid-template-columns: 50% 50% !important;
+        grid-row-gap: 30px !important;
+        margin-top: 10px;
+    }
+
+    #right .container__right .tovar__card .top__navigation{
+        padding: 33px 0 0 30px !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .card__tovar__main .buy__kredit .top{
+        justify-content: flex-start !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers .credit__container{
+        display: grid !important;
+        justify-self: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers .credit__container .about{
+        padding-bottom: 0 !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers .credit__container .about h4{
+        text-align: center !important;
+    }
+
+    #right .container__right .tovar__card .tovar__card__content .credit__info .credit__containers .credit__container .about h5{
+        text-align: center !important;
+    }
+
+    #right .container__right .bonus{
+        display: block !important;
+    }
+
+    #right .container__right .harakteristiks {
+        display: none !important;
+    }
+
+    .harakteristiks__mobile{
+        display: grid !important;
+    }
+
+    #right .container__right .harakteristiks__mobile .top__nav {
+        grid-template-columns: 100% !important;
+        grid-row-gap: 5px;
+    }
+    #topcard{
+        grid-template-columns: 100% !important;
+    }
+
+    #right .container__right .early__mobile .hits__containers .hit__container img, #right .container__right .early__mobile .hits__containers .early__container img, #right .container__right .early__mobile .early__containers .hit__container img, #right .container__right .early__mobile .early__containers .early__container img, #right .container__right .hits__mobile .hits__containers .hit__container img, #right .container__right .hits__mobile .hits__containers .early__container img, #right .container__right .hits__mobile .early__containers .hit__container img, #right .container__right .hits__mobile .early__containers .early__container img{
+        max-width: 130px !important;
+    }
+
+    #right .container__right .early__mobile .hits__containers .hits__container img, #right .container__right .early__mobile .hits__containers .early__container img, #right .container__right .early__mobile .early__containers .hits__container img, #right .container__right .early__mobile .early__containers .early__container img, #right .container__right .hits__mobile .hits__containers .hits__container img, #right .container__right .hits__mobile .hits__containers .early__container img, #right .container__right .hits__mobile .early__containers .hits__container img, #right .container__right .hits__mobile .early__containers .early__container img{
+        max-width: 130px !important;
+    }
+
+    .early__mobile{
+        display: block !important;
+    }
+
+    .hits__mobile{
+        display: block !important;
+    }
 }
 
 @media screen and (max-width: 550px){
@@ -375,6 +553,11 @@
     #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .buy{
         height: 40px !important;
     }
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .buy span svg {
+        width: 20px !important;
+    }
+
+    
 }   
 
 
@@ -456,5 +639,48 @@
     
     .main .right #carousel .carusel__container h2{
         font-size: 16px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .gifts__containers{
+        grid-row-gap: 5px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .buy span {
+        height: 30px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .gifts__containers .gift__container p{
+        font-size: 14px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .complect .gift {
+        font-size: 12px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus h3 {
+        font-size: 12px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .buy span p {
+        font-size: 13px !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container{
+        grid-template-columns: 40.246575% 53.849315% !important;
+    }
+
+    #right .container__right .bonus .bonus__containers .bonus__container .right__bonus .buy {
+        width: 100% !important;
+    }
+
+    #right .container__right .harakteristiks .container__harakter__content .technic__harakter .technic__containers .technic__container, #right .container__right .harakteristiks__mobile .container__harakter__content .technic__harakter .technic__containers .technic__container{
+        width: 100% !important;
+        grid-template-columns: 100% !important;
+        grid-row-gap: 5px;
+    }
+
+    #right .container__right .early__mobile, #right .container__right .hits__mobile{
+        padding-right: 15px !important;
+        padding-bottom: 40px;
     }
 }
