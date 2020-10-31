@@ -27,16 +27,19 @@ popularsContainers = document.querySelector('.populars__containers'),
 otzyv = document.querySelectorAll('.otzyv'),
 dotsIndicators = document.querySelector('.dots__indicators'),
 burger = document.querySelector('.burger'),
-menu = document.querySelector('.dark > .container');
+menu = document.querySelector('.dark > .container'),
+headerNav = document.querySelector('.header__nav');
 
 let menuopen = false;
 
 burger.addEventListener('click', () => {
     if(!menuopen){
+        headerNav.style.display = "block";
         $('.dark > .container').height('auto');
         menuopen = true;
     }
     else{
+        headerNav.style.display = "none";
         $('.dark > .container').height('50px');
         menuopen = false;
     }

@@ -18,7 +18,8 @@ showTovars = document.getElementById('show__tovars'),
 numberPage = document.querySelectorAll('.number__page'),
 pages = document.querySelector('.pages'),
 next = document.querySelector('.next'),
-prev = document.querySelector('.prev');
+prev = document.querySelector('.prev'),
+headerNav = document.querySelector('.header__nav');
 
 let viewsMode = "rows";
 let tovarCount = 0;
@@ -276,10 +277,12 @@ let menuopen = false;
 
 burger.addEventListener('click', () => {
     if(!menuopen){
+        headerNav.style.display = "block";
         $('.dark > .container').height('auto');
         menuopen = true;
     }
     else{
+        headerNav.style.display = "none";
         $('.dark > .container').height('50px');
         menuopen = false;
     }

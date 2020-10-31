@@ -1,3 +1,7 @@
+@media screen and (max-width: 1200px) {
+  #main {
+    display: grid;
+    grid-template-columns: 220px 76%; } }
 @media screen and (max-width: 998px) {
   body {
     font-size: 0.9em; }
@@ -29,10 +33,22 @@
     margin-top: 60px; }
 
   .about-content {
-    margin-top: 100px; } }
+    margin-top: 100px; }
+
+  .companies {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px; }
+
+  #main {
+    padding: 0 10px 0 0; } }
 @media screen and (max-width: 900px) {
   .right {
     max-width: 100% !important; }
+
+  #main {
+    grid-template-columns: 100% !important;
+    padding: 0 10px !important; }
 
   .popular__hits {
     max-width: 100% !important; }
@@ -46,6 +62,16 @@
   .reviews .container h2 {
     text-align: center; } }
 @media screen and (max-width: 768px) {
+  .header__nav {
+    display: none; }
+
+  .developers .name__tovars {
+    display: grid !important;
+    grid-template-columns: 50% 50%; }
+
+  .catalog__containers__column {
+    grid-template-columns: repeat(3, 1fr) !important; }
+
   .burger {
     display: flex !important;
     flex-direction: column;
@@ -114,6 +140,9 @@
     justify-content: center !important;
     height: auto; }
 
+  .catalog__top {
+    padding-left: 0 !important; }
+
   .about-content {
     margin-top: 50px !important;
     display: grid; }
@@ -157,11 +186,61 @@
     padding: 0 !important; }
 
   .categories a img {
-    max-width: 100%; } }
+    max-width: 100%; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row {
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+    grid-template-rows: 24px 28px 53px 54px 26px !important;
+    padding: 10px 0 0 0 !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row img {
+    grid-area: 2/1/6/2 !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row h4 {
+    grid-area: 2/2/3/3 !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .vmeste {
+    grid-area: 1/1/2/2 !important;
+    padding-left: 10px; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .haracter {
+    grid-area: 3/2/4/3 !important;
+    align-self: end; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .price {
+    grid-area: 4/2/5/3 !important;
+    align-self: end; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .together {
+    grid-area: 1/2/2/3 !important;
+    justify-self: end !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .together .kolvo {
+    display: none !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .buy {
+    grid-area: 6/1/7/3 !important;
+    margin: 0 !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .buy span {
+    height: 100% !important; } }
+@media screen and (max-width: 550px) {
+  .catalog__containers__column {
+    grid-template-columns: 49% 49% !important; }
+
+  .catalog__container__column {
+    max-width: 100% !important; } }
 @media screen and (max-width: 480px) {
   .categories {
     display: grid;
     grid-template-columns: 1fr 1fr !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .vmeste {
+    justify-content: space-between !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .vmeste h5 {
+    margin: 0 !important; }
 
   .categories a {
     flex: auto !important;
@@ -183,13 +262,78 @@
     font-size: 19px !important; }
 
   .main .right #carousel .carusel__container h2 {
-    font-size: 20px !important; } }
+    font-size: 20px !important; }
+
+  #right .container__right .catalog__content .content__menu {
+    justify-content: space-between !important; }
+
+  #right .container__right .catalog__top .developers .companies {
+    grid-template-columns: 50% 50% !important; }
+
+  #right .container__right .catalog__content .content__menu .view {
+    margin-left: 0 !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row h4 {
+    font-size: 12px !important; }
+
+  .haracter p {
+    font-size: 10px !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .together img {
+    max-width: 16px !important;
+    align-self: start !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .buy {
+    height: 40px !important; } }
 @media screen and (max-width: 360px) {
   header .logo img {
     max-width: 150px !important; }
 
+  .sortirovka h4 {
+    font-size: 12px;
+    align-self: center; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .vmeste .stars {
+    margin-top: 4px !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__row .catalog__container__row .vmeste .stars img {
+    max-width: 6px !important;
+    height: 6px !important; }
+
+  .rows {
+    width: 18px !important;
+    height: 16px !important;
+    align-self: center; }
+
+  .rows .line {
+    height: 2px !important; }
+
+  .view h4 {
+    font-size: 12px;
+    align-self: center; }
+
+  .variant__value {
+    font-size: 12px;
+    align-self: center; }
+
+  #right .container__right .catalog__top .developers .name__tovars h5 {
+    font-size: 12px !important; }
+
   .about h1 {
     font-size: 1.2em !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka {
+    grid-row-gap: 10px !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar h3 {
+    margin-bottom: 10px !important;
+    font-size: 0.6em !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar .haracter {
+    margin-bottom: 10px !important; }
+
+  #right .container__right .catalog__content .tovars .catalog__containers__column .catalog__container__column .ramka .about__tovar .haracter p {
+    font-size: 0.7em !important; }
 
   .advantages {
     padding: 55px 10px !important; }
